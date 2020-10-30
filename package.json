@@ -1,0 +1,25 @@
+{
+  "name": "https-server",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "main": "index.cjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UniBreakfast/https-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UniBreakfast/https-server/issues"
+  },
+  "homepage": "https://github.com/UniBreakfast/https-server#readme",
+  "dependencies": {
+    "c4console": "^1.0.8",
+    "up2require": "^1.2.1"
+  }
+}
