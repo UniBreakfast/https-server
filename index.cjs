@@ -7,7 +7,7 @@ if (dev) require = require('up2require')(require)
 const http = require('http')
 
 
-const handleRequest = require('./reqHan.cjs', 0, dev)
+const handleRequest = require('./reqHan.cjs', dev)
 
 const server = http.createServer(handleRequest)
 
