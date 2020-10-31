@@ -6,8 +6,9 @@ const handleMiss = require('./missHan.cjs', dev)
 
 module.exports = handleRequest
 
+"exporting handleRequest function".c()
 
 async function handleRequest(request, response) {
-  'handling request'.c()
+  'handling request, am I not?'.c()
   return handleMiss(request, response)
 }

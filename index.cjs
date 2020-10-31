@@ -12,7 +12,7 @@ const options = {
   cert: dev ? fs.readFileSync('cert.pem') : process.env.CERTIFICATE,
 };
 
-const handleRequest = require('./reqHan.cjs', dev)
+const handleRequest = require('./reqHan.cjs', 0, dev)
 
 const server = https.createServer(options, handleRequest)
 
