@@ -8,8 +8,8 @@ const fs = require('fs')
 const https = require('https')
 
 const options = {
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem')
+  key:  dev ? fs.readFileSync('key.pem')  : process.env.PUB_KEY,
+  cert: dev ? fs.readFileSync('cert.pem') : process.env.CERTIFICATE,
 };
 
 const handleRequest = require('./reqHan.cjs', dev)
