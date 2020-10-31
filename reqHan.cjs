@@ -8,6 +8,6 @@ module.exports = handleRequest
 
 
 async function handleRequest(request, response) {
-
+  'handling request'.c()
   return handleMiss(request, response)
 }

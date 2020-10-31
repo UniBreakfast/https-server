@@ -5,6 +5,7 @@ async function handleMiss(request, response) {
   const {method, url} = request
   const html = buildHTML(method, url)
 
+  "sending response".c()
   response.writeHead(404, {"content-type": "text/html"}).end(html)
 }
 
