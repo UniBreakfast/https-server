@@ -8,11 +8,9 @@ const fs = require('fs')
 const https = require('https')
 
 const options = {
-  key:  dev ? fs.readFileSync('key.pem').toString()  : process.env.PUB_KEY,
-  cert: dev ? fs.readFileSync('cert.pem').toString() : process.env.CERTIFICATE,
+  key:  fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem'),
 };
-
-JSON.stringify(options).c()
 
 const handleRequest = require('./reqHan.cjs', 0, dev)
 
@@ -23,6 +21,6 @@ server.listen(port, reportStart)
 
 
 function reportStart() {
-  if (dev) `HTTPS Server started at https://localhost:${port}`.c()
-  else '===== server started ====='.c()
+  if (dev) c(`HTTPS Server started at https://localhost:${port}`)
+  else c('===== server started =====')
 }
