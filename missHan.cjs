@@ -5,7 +5,6 @@ async function handleMiss(request, response) {
   const {method, url} = request
   const html = buildHTML(method, url)
 
-  "sending response".c()
   response.writeHead(404, {"content-type": "text/html"}).end(html)
 }
 
@@ -46,8 +45,7 @@ const style = /* css */ `
         line-height: 0.8;
         text-align: right;
         opacity: .5;
-        animation: focus 7s ease-in-out infinite alternate; }
-        @keyframes focus { from { filter: blur(4vw) }
+        animation: focus-big 4s infinite alternate
       }
       .issue {
         text-align: left;
@@ -55,10 +53,21 @@ const style = /* css */ `
         margin: 1vw 0 1vw auto;
         font-size: 2.5vw;
         opacity: 0.8;
+        animation: focus-small 2s infinite alternate
       }
       .problem {
         text-align: center;
         font-size: 5.3vw;
         opacity: .7;
+        animation: focus 4s infinite alternate
+      }
+      @keyframes focus-big {
+        to { filter: blur(1.4vw) }
+      }
+      @keyframes focus {
+        from { filter: blur(.5vw) }
+      }
+      @keyframes focus-small {
+        from { filter: blur(.3vw) }
       }
 `

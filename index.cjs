@@ -16,6 +16,6 @@ server.listen(port, reportStart)
 
 
 function reportStart() {
-  if (dev) `HTTP Server started at http://localhost:${port}`.c()
-  else '===== server started ====='.c()
+  if (dev) c(`HTTP Server started at http://localhost:${port}`)
+  else c('===== server started =====')
 }
