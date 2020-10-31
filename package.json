@@ -1,11 +1,12 @@
 {
   "name": "https-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Just an attempt at understanding all this HTTPS/SSL/TSL/Certificate thing",
   "type": "commonjs",
   "main": "index.cjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.cjs"
   },
   "repository": {
     "type": "git",
